@@ -1,7 +1,7 @@
 import React from 'react';
-import poster from '../MidtermResults.png'
+// import poster from '../MidtermResults.png'
 import './ProjectResults.css';
-
+import table from '../table.JPG';
 const ProjectResults = () => {
     return (
       //<div style = {{backgroundColor: 'white', height:"150vh",width:"200vh"}}>
@@ -17,9 +17,61 @@ const ProjectResults = () => {
         In this case, the five models - Random Forest, K-Nearest Neighbors (KNN), Gradient Boosting, Partial Least Squares (PLS), and Orthogonal Matching Pursuit (OMP) - will work together to produce a more accurate and robust prediction. 
         The performance metrics provided for each model will be used to analyze their individual contributions to the ensemble.
         </p>
-        <div className='main-container' >
-            <img src={poster} />
-        </div>
+        <table>
+            <colgroup span="3"></colgroup>
+            <tr>
+                <th>Model</th>
+                <th>RMSE</th>
+                <th>R-Squared</th>
+            </tr>
+            <tr>
+                <td>Random Forest</td>
+                <td>0.05422</td>
+                <td>0.837757</td>
+            </tr>
+            <tr>
+                <td>KNN</td>
+                <td>0.070388</td>
+                <td>0.726568</td>
+            </tr>
+            <tr>
+                <td>Gradient Boosting</td>
+                <td>0.05216</td>
+                <td>0.849846</td>
+            </tr>
+            <tr>
+                <td>PLS</td>
+                <td>0.049702</td>
+                <td>0.863668</td>
+            </tr>
+            <tr>
+                <td>OMP
+                </td>
+                <td>0.017896</td>
+                <td>0.982324</td>
+            </tr>
+            <tr>
+                <td>Ada Boost</td>
+                <td>0.05392</td>
+                <td>0.839545</td>
+            </tr>
+            <tr>
+                <td>SGD</td>
+                <td>0.43584</td>
+                <td>0.895162</td>
+            </tr>
+            <tr>
+                <td>SVR</td>
+                <td>0.058471</td>
+                <td>0.81132</td>
+            </tr>
+            <tr>
+                <td>Ridge</td>
+                <td>0.021168</td>
+                <td>0.97527</td>
+            </tr>
+        </table>
+      
         <p>
         The OMP model exhibits the best performance among the five models, with the lowest values for MSE, RMSE, and MAE. 
         Consequently, it will likely have a strong positive influence on the ensembles overall performance. 
@@ -41,6 +93,14 @@ const ProjectResults = () => {
         While daily prices are generally non stationary while the daily returns are generally stationary. 
         Which by definition is a linear stochastic process that has a unit root of 1 which describes a non-stationary process. While taking the percent change is a good method to remove this effect another method is to take the log difference of the function. 
         Applying the log difference to the function is useful as logarithms are time-invariant and will help to stabilize the variance. Taking the first order of difference of this function can be used to obtain the required stationary data. 
+        </p>
+        <h4>
+             Conclusion
+        </h4>
+        <p>
+        In summary, the ensemble voting mechanism that stacks several models can lead to improved performance by leveraging the strengths of each model while mitigating their weaknesses. 
+The OMP and PLS models will likely have a significant positive impact on the ensemble’s performance, with Gradient Boosting, Random Forest, and KNN models providing additional complementary information.
+
         </p>
         <h5>
           Link to Final Paper

@@ -8,7 +8,7 @@ const Team = () => {
           <h1>Project Team</h1>
         </header>
         <p>
-            Eshan Kaul: ...write whatever
+            Eshan Kaul
         </p>
         <p>
             Stephen Goodwin
