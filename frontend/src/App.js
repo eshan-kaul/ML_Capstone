@@ -1,49 +1,39 @@
 import React from 'react';
 import './App.css';
-import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
+import Sidebar2 from "./components/Sidebar";
+import NotFound from './pages/NotFound';
 import {
     BrowserRouter as Router,
     Routes,
     Route,
     Navigate,
+    useNavigate,
+    NavLink,
+    Outlet
   } from "react-router-dom";
-  import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-  import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-  import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
-  import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-  import Info from "@mui/icons-material/Info";
-  import Code from "@mui/icons-material/Code";
-  import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+
+  import Home from "./pages/Home"
+  import ProjectResults from "./pages/ProjectResults";
 function App() {
-  const { collapseSidebar } = useProSidebar();
-  const textColor = { color: 'white' };
+  const textColor = { color: 'white'}
+ 
   return (
-    <div id="app" style={({ height: "100vh" }, { display: "flex" })}>
-      
-      <Sidebar backgroundColor= "rgb(99,0,49)" style={{ height: "100vh"}}>
-        <Menu>
-          <MenuItem
-            icon={<MenuOutlinedIcon />}
-            onClick={() => {
-              collapseSidebar();
-            }}
-            style={{ textAlign: "center" }}
-          >
-            {" "}
-            <h2>Nav</h2>
-          </MenuItem>
-          <MenuItem style = {textColor} icon={<HomeOutlinedIcon />}>Home</MenuItem>
-          <MenuItem icon={<ContactsOutlinedIcon />}>Project Results</MenuItem>
-          <MenuItem icon={<PeopleOutlinedIcon />}>Team</MenuItem>
-          <MenuItem icon={<ReceiptOutlinedIcon />}>Poster</MenuItem>
-          <MenuItem icon={<Code />}>Repository</MenuItem>
-        </Menu>
-        
-      </Sidebar>
+    <div id="app" style={({ height: "100vh", backgroundColor: 'white' }, { display: "flex" })}>
+      <Sidebar2/>
       <main>
-        <h1 style={{ color: "white", marginLeft: "5rem" }}>
-          React-Pro-Sidebar
-        </h1>
+        {/* Routing. For the sidebar buttons, the rest of the code is in Sidebar
+        TODO: Fix the repository button to link to the github repo, or create a page 
+        that has the link.
+        TODO: Fix the notfound route. */}
+          <Routes>
+            <Route index element={<Home/>} />
+            <Route path="/project-results" element={<ProjectResults />} />
+            <Route path='/code' Component={()=>{
+              window.location.replace("https://github.com/eshan-kaul/ML_Cap")
+            }}/>
+            <Route path='/not-found' element={<NotFound />} />
+          </Routes>
+          <Outlet/>
       </main>
     </div>
   );
