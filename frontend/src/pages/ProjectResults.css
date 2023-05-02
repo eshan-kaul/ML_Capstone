@@ -1,0 +1,83 @@
+/* ProjectResults.css */
+
+/* Set background color of page */
+body {
+    background-color: white;
+  }
+  
+  /* Set font styles for headings */
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Set font style for body text */
+  p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Set styles for image container */
+  .main-container {
+    display: left;
+    justify-content: left;
+    align-items: left;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    max-height: 30%;
+  }
+  
+  /* Set styles for image */
+  img {
+    max-height: 30%;
+    max-width: 25%;
+    object-fit: scale-down;
+  }
+  
+  /* Set overall width and margin for the page content */
+  .container {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+  }
+  .project-results-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .project-results-container img {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-results-container p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  
