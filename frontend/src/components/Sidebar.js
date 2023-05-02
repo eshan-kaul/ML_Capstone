@@ -32,7 +32,7 @@ const Sidebar2 = ()  => {
           <MenuItem component={<Link to="/project-results" />}icon={<ContactsOutlinedIcon />}>Project Results</MenuItem>
           <MenuItem component={<Link to="/team" />} icon={<PeopleOutlinedIcon />}>Team</MenuItem>
           <MenuItem component={<Link to="/poster" />} icon={<ReceiptOutlinedIcon />}>Poster</MenuItem>
-          <MenuItem component={<Link to="/code" />} icon={<Code />}>Repository</MenuItem>
+          <MenuItem component={<Link to={{pathname: "/code"}} target='_blank' />} icon={<Code />}>Repository</MenuItem>
         </Menu>
         
       </Sidebar>
