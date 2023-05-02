@@ -1,7 +1,7 @@
 import React from 'react';
 // import poster from '../MidtermResults.png'
 import './ProjectResults.css';
-import table from '../table.JPG';
+import graph from '../Graph.png';
 const ProjectResults = () => {
     return (
       //<div style = {{backgroundColor: 'white', height:"150vh",width:"200vh"}}>
@@ -16,7 +16,7 @@ const ProjectResults = () => {
         In an ensemble machine learning approach, multiple models are combined to achieve improved overall performance. In this case, the 9 models - Random Forest, K-Nearest Neighbors (KNN), Gradient Boosting, Partial Least Squares (PLS), and Orthogonal Matching Pursuit (OMP), Ada-Boost, Ridge, Support Vector Regression (SVR), Stochastic Gradient Descent (SGD) - will work together to produce a more accurate and robust prediction. The performance metrics provided for each model will be used to analyze their individual
         contributions to the ensemble.
         </p>
-        <table>
+        <table >
             <colgroup span="3"></colgroup>
             <tr>
                 <th>Model</th>
@@ -70,7 +70,9 @@ const ProjectResults = () => {
                 <td>0.97527</td>
             </tr>
         </table>
-      
+        <div width='50%'>
+            <img src={graph}/>
+        </div>
         <p>
         The OMP model exhibits the best performance among the nine models, with the lowest values for MSE, RMSE, and MAE. Consequently, it will likely have a strong positive influence on the ensembles overall performance. The PLS model follows closely with the second-best performance, making it another valuable contributor to the ensemble. These two models can potentially compensate for the weaker performance of the other three models, especially in cases where the weaker models might overfit or fail to capture
         specific patterns in the data. The Gradient Boosting model, which presents a middle ground between the OMP and PLS models and the Random Forest and KN
