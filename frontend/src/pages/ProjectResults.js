@@ -13,22 +13,20 @@ const ProjectResults = () => {
           Ensemble Model
         </h4>
         <p>
-        In an ensemble machine learning approach, multiple models are combined to achieve improved overall performance. 
-        In this case, the five models - Random Forest, K-Nearest Neighbors (KNN), Gradient Boosting, Partial Least Squares (PLS), and Orthogonal Matching Pursuit (OMP) - will work together to produce a more accurate and robust prediction. 
-        The performance metrics provided for each model will be used to analyze their individual contributions to the ensemble.
+        In an ensemble machine learning approach, multiple models are combined to achieve improved overall performance. In this case, the 9 models - Random Forest, K-Nearest Neighbors (KNN), Gradient Boosting, Partial Least Squares (PLS), and Orthogonal Matching Pursuit (OMP), Ada-Boost, Ridge, Support Vector Regression (SVR), Stochastic Gradient Descent (SGD) - will work together to produce a more accurate and robust prediction. The performance metrics provided for each model will be used to analyze their individual
+        contributions to the ensemble.
         </p>
         <div className='main-container' >
             <img src={poster} />
         </div>
         <p>
-        The OMP model exhibits the best performance among the five models, with the lowest values for MSE, RMSE, and MAE. 
-        Consequently, it will likely have a strong positive influence on the ensembles overall performance. 
-        The PLS model follows closely with the second-best performance, making it another valuable contributor to the ensemble. These two models can potentially compensate for the weaker performance of the other three models, especially in cases where the weaker models might overfit or fail to capture specific patterns in the data.
-        The Gradient Boosting model, which presents a middle ground between the OMP and PLS models and the Random Forest and KNN models, could still contribute valuable information to the ensemble. 
-        While it may not be as accurate as the OMP and PLS models, its distinct learning approach can help capture patterns missed by the other models, thus enhancing the ensembles performance.
-        The Random Forest and KNN models, despite having relatively higher error values, can still play a role in the ensemble approach. 
-        Their unique learning mechanisms can capture different aspects of the data, complementing the other models and potentially improving the overall performance. 
-        However, it is crucial to carefully manage their weights in the ensemble to avoid negative impacts on the final predictions.
+        The OMP model exhibits the best performance among the five models, with the lowest values for MSE, RMSE, and MAE. Conse- quently, it will likely have a strong positive influence on the ensem- ble's overall performance. The PLS model follows closely with the second-best performance, making it another valuable contributor to the ensemble. These two models can potentially compensate for the weaker performance of the other three models, especially in cases where the weaker models might overfit or fail to capture
+        specific patterns in the data. The Gradient Boosting model, which presents a middle ground between the OMP and PLS models and the Random Forest and KN
+        models, could still contribute valuable information to the ensemble. While it may not be as accurate as the OMP and PLS models, its distinct learning approach can help capture patterns missed by the
+        other models, thus enhancing the ensemble's performance.
+        The Random Forest and KNN models, despite having relatively
+        higher error values, can still play a role in the ensemble approach. Their unique learning mechanisms can capture different aspects of the data, complementing the other models and potentially im- proving the overall performance. However, it is crucial to carefully manage their weights in the ensemble to avoid negative impacts
+        on the final predictions.
         </p>
         <h4>
           ARIMA Model
