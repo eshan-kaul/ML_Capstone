@@ -15,6 +15,7 @@ import {
 
   import Home from "./pages/Home"
   import ProjectResults from "./pages/ProjectResults";
+  import Team from "./pages/Team";
 function App() {
   const textColor = { color: 'white'}
  
@@ -33,6 +34,7 @@ function App() {
               window.location.replace("https://github.com/eshan-kaul/ML_Cap")
             }}/>
             <Route path='/*' element={<NotFound />} />
+            <Route path='/team' element={<Team />} />
           </Routes>
           <Outlet/>
           <Footer/>
