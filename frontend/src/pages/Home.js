@@ -1,8 +1,8 @@
 const Home = () => {
   return (
     <div
-    min-height="100%"
-    style = {{backgroundColor: 'white'}}>
+    
+    style = {{backgroundColor: 'white', height:"100vh"}}>
     <>
       <header>
         <h1>Home</h1>
