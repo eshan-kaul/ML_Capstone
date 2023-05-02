@@ -13,6 +13,11 @@ import {
   import ProjectResults from "./pages/ProjectResults";
   import Team from "./pages/Team";
   import Poster from './pages/Poster';
+
+function Code() {
+  window.location.replace("https://github.com/eshan-kaul/ML_Capstone");
+  return null;
+}
 function App() {
  
   return (
@@ -26,9 +31,7 @@ function App() {
           <Routes>
             <Route index element={<Home/>} />
             <Route path="/project-results" element={<ProjectResults />} />
-            <Route path='/code' Component={()=>{
-              window.location.replace("https://github.com/eshan-kaul/ML_Cap")
-            }}/>
+            <Route path='/code' element={<Code/>}/>
             <Route path='/*' element={<NotFound />} />
             <Route path='/team' element={<Team />} />
             <Route path='/poster' element={<Poster />} />
