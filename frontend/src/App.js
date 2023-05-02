@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Sidebar2 from "./components/Sidebar";
+import Footer from "./components/Footer";
 import NotFound from './pages/NotFound';
 import {
     BrowserRouter as Router,
@@ -31,9 +32,10 @@ function App() {
             <Route path='/code' Component={()=>{
               window.location.replace("https://github.com/eshan-kaul/ML_Cap")
             }}/>
-            <Route path='/not-found' element={<NotFound />} />
+            <Route path='/*' element={<NotFound />} />
           </Routes>
           <Outlet/>
+          <Footer/>
       </main>
     </div>
   );
