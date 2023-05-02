@@ -28,8 +28,15 @@ const Home = () => {
              markets. 
       </p>
       <p>
-      In order to fully take advantage of the pairs trading strategy a Regression Voting Ensemble with soft voting will be implemented to attempt to forecast the future prices of identified cointegrated assets. Regression Voting Ensemble is a model that works by combining multiple different machine learning techniques in order to average all of their results to choose the optimal prediction for the data. Soft voting is the process of averaging the probabilities of all the estimators combined.
-Within the Ensemble Voting model, the forecasted future returns of cointegrated crypto assets will be modeled by stacking Random Forests, Linear Regression, Orthogonal Matching Pursuit, and Gradient Boosting Regressor to create a robust crypto forecasting model.
+      In order to fully take advantage of the pairs trading strategy a Regression 
+      Voting Ensemble with soft voting was implemented to attempt to forecast the 
+      future prices of identified cointegrated assets. Regression Voting Ensemble 
+      is a model that works by combining multiple different machine learning techniques 
+      in order to average all of their results to choose the optimal prediction for the data. 
+      Soft voting is the process of averaging the probabilities of all the estimators combined.
+Within the Ensemble Voting model, the forecasted future returns of cointegrated crypto assets
+ was modeled by stacking Random Forests, Linear Regression, Orthogonal Matching Pursuit,
+  and Gradient Boosting Regressor to create a robust crypto forecasting model.
       </p>
     </>
     </div>
